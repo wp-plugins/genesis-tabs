@@ -90,7 +90,7 @@ class Genesis_Tabs_Widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array( 'classname' => 'ui-tabs', 'description' => __('Displays featured posts in Tabs', 'genesis') );
 		$control_ops = array( 'width' => 505, 'height' => 350, 'id_base' => 'tabs' );
-		$this->WP_Widget( 'tabs', __( 'Genesis - Tabs', 'genesis' ), $widget_ops, $control_ops );
+		$this->WP_Widget( 'tabs', __( 'Featured Tabs', 'genesis' ), $widget_ops, $control_ops );
 	}
 
 	/** Widget Output */
