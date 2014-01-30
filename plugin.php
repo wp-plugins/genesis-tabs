@@ -6,7 +6,7 @@
 	Author: StudioPress
 	Author URI: http://www.studiopress.com/
 
-	Version: 0.9.1
+	Version: 0.9.2
 
 	License: GNU General Public License v2.0 (or later)
 	License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -122,6 +122,10 @@ class Genesis_Tabs_Widget extends WP_Widget {
 		) );
 
 		echo $before_widget;
+		
+			// Output Widget Title
+			if ( ! empty( $instance['title'] ) )
+				echo $before_title . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . $after_title;
 
 			// Pull the chosen categories into an array
 			$cats = array( $instance['posts_cat_1'], $instance['posts_cat_2'], $instance['posts_cat_3'], $instance['posts_cat_4'], $instance['posts_cat_5'], $instance['posts_cat_6'], $instance['posts_cat_7'], $instance['posts_cat_8'] );
